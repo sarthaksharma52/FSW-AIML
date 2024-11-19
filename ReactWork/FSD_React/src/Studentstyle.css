@@ -1,0 +1,21 @@
+html,body{
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content: center;
+    align-items: center; */
+}
+.icard{
+    height: 280px;
+    width: 200px;
+    border: 2px solid red;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.image img{
+    height: 150px;
+    width: 150px;
+    
+}
