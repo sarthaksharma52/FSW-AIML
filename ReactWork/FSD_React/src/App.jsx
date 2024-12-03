@@ -1,8 +1,8 @@
-import React from 'react'
-import Student from './Student';
-import logo from './anuj.png';
+// import React from 'react'
+// import Student from './Student';
+// import logo from './anuj.png';
 
-function App() {
+// function App() {
   // let a=20;
   // let mystyle={
 
@@ -12,18 +12,18 @@ function App() {
   //   height:'100px'
   // }
 
-const studentdata={
-  college:"ABES EC",
-  name:"Sarthak Sharma",
-  roll:"2200321530149",
-  branch:"CSE_(AI-ML)",
-  pic:"https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/car_4.png",
-  section:"C"
-}
+// const studentdata={
+//   college:"ABES EC",
+//   name:"Sarthak Sharma",
+//   roll:"2200321530149",
+//   branch:"CSE_(AI-ML)",
+//   pic:"https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/car_4.png",
+//   section:"C"
+// }
 
-  return (
-     <div style={{marginLeft:"300px"}}>
-     <Student data={studentdata} />
+//   return (
+//      <div style={{marginLeft:"300px"}}>
+//      <Student data={studentdata} />
 
 
 
@@ -37,7 +37,7 @@ const studentdata={
       <Student college="ABES EC" pic={<img src= {logo} height={100} width={100} />} roll="2200321530149" section="C" name = "Sarthak Sharma" branch = "CSE_(AI-ML)"/>
 
       <Student college="ABES EC" pic={<img src= {logo} height={100} width={100} />} roll="2200321530149" section="C" name = "Sarthak Sharma" branch = "CSE_(AI-ML)"/> */}
-      </div>
+      // </div>
 
 
 
@@ -52,8 +52,23 @@ const studentdata={
     //     <Student/>
     //   </div>
     //   </div>
-  )
+//   )
 
+// }
+
+// export default App
+
+import React from 'react'
+// import StudentState from './StudentState'
+import ImageManipulation from './ImageManipulation'
+import UseEffectWorking from './UseEffectWorking'
+function App() {
+  return (
+    <div style={{marginLeft:"300px"}}>
+      <ImageManipulation />
+      <UseEffectWorking/>
+    </div>
+  )
 }
 
 export default App
