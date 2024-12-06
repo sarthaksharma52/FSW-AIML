@@ -58,15 +58,23 @@
 
 // export default App
 
-import React from 'react'
+import React, { useState } from 'react'
 // import StudentState from './StudentState'
-import ImageManipulation from './ImageManipulation'
-import UseEffectWorking from './UseEffectWorking'
+// import ImageManipulation from './ImageManipulation'
+// import UseEffectWorking from './UseEffectWorking'
+import Registration from './Components/Registration'
+import Login from './Components/Login'
 function App() {
+
+  const[shareData,setShareData] = useState();
+
   return (
     <div style={{marginLeft:"300px"}}>
-      <ImageManipulation />
-      <UseEffectWorking/>
+      {/* <ImageManipulation />
+      <UseEffectWorking/> */}
+      <Registration regdata={setShareData}/>
+      <Login/>
+
     </div>
   )
 }
