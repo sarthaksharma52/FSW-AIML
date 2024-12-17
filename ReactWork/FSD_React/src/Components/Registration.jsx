@@ -4,20 +4,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Registration = ({regdata}) => {
     const[email,setEmail] = useState();
     const[password,setPassword] = useState();
-    const[name,setName] = useState();
+    const[myname,setName] = useState();
     const[mydata,setMyData] = useState();
     function getData(e){
         e.preventDefault();
         console.log(mydata);
+        alert('jai shree Ram ' + ' your detais are ' + ' name ' + myname + ' email ' + email + ' password ' + password);
         const data = {
-            name,password,email
+            myname,password,email
         }
-        regdata(data)
-        setMyData(data);
+        console.log(data);
+        // setMyData(data);
+        regdata(data);
     }
 
   return (
     <div>
+      <h1 style={{color:'white',backgroundColor:'orange',width:'300px',paddingLeft:'50px'}}>Registration</h1>
         <div>{JSON.stringify(mydata)}</div>
         <form>
   <div className="form-group">
@@ -45,4 +48,3 @@ const Registration = ({regdata}) => {
 }
 
 export default Registration
-

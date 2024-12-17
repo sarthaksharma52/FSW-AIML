@@ -59,21 +59,34 @@
 // export default App
 
 import React, { useState } from 'react'
-// import StudentState from './StudentState'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // import ImageManipulation from './ImageManipulation'
 // import UseEffectWorking from './UseEffectWorking'
 import Registration from './Components/Registration'
 import Login from './Components/Login'
+import MainLayout from './Components/MainLayout';
+import Dashboard from './Components/Dashboard';
 function App() {
 
   const[shareData,setShareData] = useState();
+  // const[dashData,useDashData] = useState();
 
   return (
     <div style={{marginLeft:"300px"}}>
       {/* <ImageManipulation />
       <UseEffectWorking/> */}
-      <Registration regdata={setShareData}/>
-      <Login/>
+      {/* <Registration regdata={setShareData}/>
+      <Login/> */}
+    {JSON.stringify(shareData)}
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<MainLayout />}>
+        <Route path='/login' element={<Login rdata={shareData}/>}/>
+        <Route path='/registration' element={<Registration regdata={setShareData} />}/>
+        </Route>
+        <Route path='/dashboard' element={<Dashboard rdata={shareData}/>} />
+      </Routes>
+      </BrowserRouter>
 
     </div>
   )
