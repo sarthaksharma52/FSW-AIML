@@ -1,3 +1,13 @@
+const disp=document.getElementById("disp");
+console.log(disp)
+function getData(){
+    console.log("get data called");
+    disp.innerHTML="<h2>you called getData</h2>"
+}
+
+
+
+
 // console.log("Jai Shree Ram");
 
 // function cCompiler(){
